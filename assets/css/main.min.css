@@ -1,0 +1,508 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans'
+}
+
+:root {
+    --main-background-color: #0a192f;
+    --main-text-color: #8892b0
+}
+
+::-webkit-scrollbar {
+    width: 18px
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:hover {
+    border-radius: 9px;
+    border: solid 6px transparent;
+    background-clip: content-box
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #c8c8c8
+}
+
+::-webkit-scrollbar-button, ::-webkit-scrollbar-corner {
+    cursor: pointer;
+    display: none
+}
+
+::-webkit-scrollbar-button, ::-webkit-scrollbar-corner {
+    background: red
+}
+
+::-webkit-scrollbar-arrow-color {
+    color: white
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    overflow-y: auto;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    color: #ccd6f6;
+    line-height: 1.1;
+}
+
+html.light, body.light {
+    --main-background-color: #ffffff;
+    --main-text-color: #121212
+}
+
+.theme {
+    position: absolute;
+    background: #ffffff;
+    height: 40px;
+    width: 40px;
+    right: 24px;
+    top: 24px;
+    border-radius: 100%;
+    z-index: 0
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0
+}
+
+h2 {
+    font-size: 2em;
+    margin: 0
+}
+
+.social {
+    display: flex;
+    margin-top: 25px;
+}
+
+.social a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 24px;
+    opacity: 0.8
+}
+
+.social a:hover {
+    opacity: 1
+}
+
+.social a:last-child {
+    margin-right: 0
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 1140px;
+    min-height: 100%;
+    height: 100%;
+    padding: 0 24px;
+    z-index: 1
+}
+
+.main-container .intro {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex: 0 0 100%;
+    height: 100%
+}
+
+.social a img {
+    width: 20px;
+}
+
+.main-container .intro .details {
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column
+}
+
+.main-container .intro .details h1 {
+    margin: 12px 0
+}
+
+.main-container .intro .details h2 {
+    margin: 6px 0;
+    margin-bottom: 48px
+}
+
+.main-container .intro .details .mail, .main-container .intro .details .location {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    margin-top: 16px
+}
+
+.main-container .intro .details .mail a, .main-container .intro .details .mail span, .main-container .intro .details .location a, .main-container .intro .details .location span {
+    text-decoration: none;
+    color: var(--main-text-color);
+    margin-left: 12px
+}
+
+.main-container .intro .details .mail a:hover, .main-container .intro .details .location a:hover {
+    text-decoration: underline
+}
+
+.main-container .intro .details .social {
+    display: flex;
+    margin-top: 48px
+}
+
+.main-container .intro .details .social a {
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-right: 24px;
+    opacity: 0.8
+}
+
+.main-container .intro .details .social a:hover {
+    opacity: 1
+}
+
+.main-container .intro .details .social a:last-child {
+    margin-right: 0
+}
+
+.main-container .intro .photo {
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.main-container .intro .photo img {
+    border-radius: 100%;
+    transition: all 0.3s ease-out;
+    max-width: 60%
+}
+
+.main-container .intro .photo img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in
+}
+
+.main-container .about {
+    margin-bottom: 48px
+}
+
+.main-container .about h2 {
+    margin-bottom: 48px
+}
+
+.main-container .about p {
+    line-height: 1.75;
+    text-align: justify
+}
+
+.main-container .expertise h2 {
+    margin-bottom: 48px
+}
+
+.main-container .expertise h3 {
+    margin-bottom: 72px
+}
+
+.main-container .expertise p {
+    line-height: 1.75;
+    text-align: justify
+}
+
+.main-container .expertise .card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 32px
+}
+
+.main-container .projects {
+    margin-bottom: 48px
+}
+
+.main-container .projects h2 {
+    margin-bottom: 48px
+}
+
+.main-container .projects p {
+    line-height: 1.75;
+    text-align: justify
+}
+
+.main-container .expertise .card .item {
+    width: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    overflow: hidden;
+    cursor: pointer
+}
+
+.main-container .expertise .card .item:hover span {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transition: all 0.3s ease
+}
+
+.main-container .expertise .card .item img {
+    height: 64px;
+    align-self: center
+}
+
+.main-container .expertise .card .item span {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    margin-top: 8px;
+    -webkit-transform: translateY(150%);
+    transform: translateY(150%);
+    transition: all 0.3s ease;
+    text-align: center;
+    white-space: nowrap
+}
+
+.footer {
+    border-top: 1px solid #64ffda;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container .experience {
+    margin-bottom: 48px
+}
+
+.main-container .experience .card {
+    margin-top: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 24px;
+    box-shadow: 1rem 0 3rem #000
+}
+
+.main-container .experience .card h3 {
+    margin: 0;
+    margin-bottom: 12px
+}
+
+.main-container .experience .card h4 {
+    margin: 0;
+    margin-bottom: 8px
+}
+
+.main-container .experience .card h4.company {
+    font-style: italic
+}
+
+.main-container .experience .card h4.time {
+    font-weight: 300
+}
+
+.main-container .experience .card .description p {
+    text-align: justify;
+    line-height: 1.75
+}
+
+.main-container .projects .cards {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.main-container .projects .cards .card {
+    flex: 0 0 calc(50% - 24px);
+    background: rgba(255, 255, 255, 0.1);
+    margin-right: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+    box-shadow: 1rem 0 3rem #000
+}
+
+.main-container .projects .cards .card h4 {
+    margin: 0;
+    margin-bottom: 12px
+}
+
+.main-container .projects .cards .card .thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%
+}
+
+.main-container .projects .cards .card .thumb img {
+    width: 100%;
+    max-width: 500px
+}
+
+.main-container .projects .cards .card .thumb iframe {
+    width: 100%;
+    max-width: 500px
+}
+
+.main-container .projects .cards .card .details {
+    padding: 12px 0;
+    line-height: 1.5;
+    text-align: justify
+}
+
+.main-container .projects .cards .card .details a {
+    color: var(--main-text-color)
+}
+
+.main-container .projects .cards .card .links {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    font-style: italic;
+    line-height: 1.5
+}
+
+.main-container .projects .cards .card .links a {
+    color: var(--main-text-color)
+}
+
+.main-container .projects .cards .card .tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 12px
+}
+
+.main-container .projects .cards .card .tags span {
+    font-size: 0.8em;
+    border: 1px solid var(--main-text-color);
+    border-radius: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 2px 8px
+}
+
+.email-btn {
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    padding: 1.25rem 1.75rem;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    max-width: 150px;
+    color: #64ffda;
+    text-decoration: none;
+    position: relative;
+}
+
+.email-btn:hover, .email-btn:focus, .email-btn:active {
+    background-color: #64ffda1a;
+    outline: none;
+}
+
+.hello-text {
+    color: #64ffda;
+}
+
+.name {
+    color: #ccd6f6;
+}
+
+.job-title {
+    color: #8892b0;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-container .intro .photo {
+        flex: 0 0 30%;
+    }
+    .main-container .intro .photo img {
+        max-width: none!important;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    ::-webkit-scrollbar {
+        width: 0
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html, body {
+        overflow-x: hidden
+    }
+    h1 {
+        font-size: 3em
+    }
+    h2 {
+        font-size: 1.5em
+    }
+    h1, h2, h3, h4 {
+        text-align: center
+    }
+    .main-container .intro .details .mail, .main-container .intro .details .location {
+        justify-content: center
+    }
+    .main-container .projects .cards .card {
+        flex: 0 0 calc(100% + 48px);
+        margin-left: -24px
+    }
+    .main-container .experience .card {
+        margin-right: -24px;
+        margin-left: -24px
+    }
+    .main-container .expertise .card .item span {
+        white-space: initial
+    }
+    .main-container .intro {
+        flex-direction: column-reverse
+    }
+    .main-container .intro .details {
+        flex: 0 0 60%;
+        justify-content: center;
+        align-items: center
+    }
+    .main-container .intro .details .social {
+        justify-content: center
+    }
+    .social {
+        justify-content: center
+    }
+    .main-container .intro .photo img {
+        align-self: center;
+        width: 50vw
+    }
+    .main-container .expertise .card {
+        justify-content: center
+    }
+    .main-container .expertise .card .item {
+        width: 100px
+    }
+    .main-container .expertise .card .item span {
+        -webkit-transform: translateY(0) !important;
+        transform: translateY(0) !important;
+        font-size: 0.8em
+    }
+    .main-container .expertise .card .item img {
+        height: 48px !important
+    }
+    .main-container .expertise .card .item i {
+        font-size: 48px !important
+    }
+}
